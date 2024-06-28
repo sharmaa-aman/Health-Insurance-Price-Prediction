@@ -25,3 +25,16 @@ def main():
     Children = st.selectbox('Select your number of children', [0, 1, 2, 3, 4], index=None, placeholder="Select")
     Smoker = st.selectbox('Select your smoking status:  For No = 0  For Yes = 1', [0, 1], index=None, placeholder="Select")
     Region = st.selectbox('Select your region:  For Northwest = 0,  For Northeast = 1,  For Southeast = 2,  For Southwest = 3', [0, 1, 2, 3], index=None, placeholder="Select")
+            
+    # code for Prediction
+    Price = ''
+    
+    # creating a button for Prediction
+    if st.button('Check Your Premium'):
+        Price = Health_Insuranace_Price_Prediction(Age, Sex, BMI, Children, Smoker, Region)
+    
+    st.success('Your predicted health insurance premium is: {}'. format(Price))    
+        
+        
+if __name__ == '__main__':
+    main()
