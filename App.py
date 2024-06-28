@@ -35,6 +35,6 @@ def main():
     
     st.success('Your predicted health insurance premium is: {}'. format(Price))    
         
-        
+                
 if __name__ == '__main__':
     main()
